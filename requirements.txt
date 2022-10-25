@@ -1,0 +1,10 @@
+nltk
+hazm
+parsivar
+pyLDAvis==3.2.2
+convert_numbers
+gensim==3.8.1
+python-bidi
+arabic_reshaper
+fastapi
+uvicorn
