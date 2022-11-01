@@ -8,3 +8,7 @@ python-bidi
 arabic_reshaper
 fastapi
 uvicorn
+python-multipart
+matplotlib
+wordcloud
+pillow
