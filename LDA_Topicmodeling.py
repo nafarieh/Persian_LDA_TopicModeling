@@ -106,7 +106,7 @@ def remove_email(text):
     return re.sub(r'\S+@\S+', '', str(text))
 
 def remove_englishword(text): 
-    return re.sub(r'[A-Za-z0-9]+', '', str(text))
+    return re.sub(r'[A-Za-z0-9]+', ' ', str(text))
 
 def remove_chars(text): 
     # return re.sub(r'\.(?!\d)', '', str(text))
@@ -134,13 +134,13 @@ def lemma(text):
 
 def preprocess(text):
     text = normal(text)
+    text = remove_chars(text)
     # text = remove_stopwords(text)
     text = remove_emoji(text)
     text = remove_link(text)
     text = remove_tabs(text) 
     text = remove_email(text) 
     text = remove_englishword(text) 
-    text = remove_chars(text)
     # text = lemma(text)
     text = remove_extraspaces(text) 
     text = remove_extranewlines(text) 
