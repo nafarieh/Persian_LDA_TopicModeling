@@ -12,9 +12,6 @@ from gensim.corpora.dictionary import Dictionary
 from nltk.util import ngrams
 from gensim.models.ldamodel import LdaModel
 from gensim.models.coherencemodel import CoherenceModel
-import matplotlib.pyplot as plt
-from gensim.models.ldamodel import LdaModel
-from gensim.models.coherencemodel import CoherenceModel
 
 from wordcloud import WordCloud
 from PIL import Image, ImageFont, ImageDraw
@@ -23,20 +20,6 @@ import arabic_reshaper
 import matplotlib.pyplot as plt
 import pyLDAvis.gensim
 
-from gensim.models.ldamodel import LdaModel
-from gensim.models.coherencemodel import CoherenceModel
-
-from nltk.util import ngrams
-
-from wordcloud import WordCloud
-from PIL import Image, ImageFont, ImageDraw
-from bidi.algorithm import get_display
-import arabic_reshaper
-import matplotlib.pyplot as plt
-
-import convert_numbers
-
-from gensim.corpora.dictionary import Dictionary
 import time
 
 def read_files(filename):
