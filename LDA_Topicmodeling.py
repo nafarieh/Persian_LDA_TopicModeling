@@ -133,6 +133,11 @@ def lemma(text):
     text=str(text)
     return lemmatizer.lemmatize(text)
 
+def handle_clear_more_triple_chars(text):
+    # remove any char that appear more than 2 times Continuously except whitespaces, tabs and newlines
+    doc_string=re.sub("(.)\\1{2,}", "\\1", text)
+    return doc_string
+
 def preprocess(text):
     text = normal(text)
     text = remove_stopwords(text)
@@ -142,9 +147,9 @@ def preprocess(text):
     text = remove_tabs(text) 
     text = remove_email(text) 
     text = remove_englishword(text) 
-    # text = lemma(text)
     text = remove_extraspaces(text) 
     text = remove_extranewlines(text) 
+    text = handle_clear_more_triple_chars(text)
     return text
 
 def ngram_convertor(sentence, stopwords, n=2, flag=1):
