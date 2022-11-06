@@ -135,8 +135,8 @@ def lemma(text):
 
 def preprocess(text):
     text = normal(text)
+    text = remove_stopwords(text)
     text = remove_chars(text)
-    # text = remove_stopwords(text)
     text = remove_emoji(text)
     text = remove_link(text)
     text = remove_tabs(text) 
